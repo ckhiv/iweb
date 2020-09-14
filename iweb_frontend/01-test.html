@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body {
+				margin: 0;
+			}
+			#d1 {
+				/* box-sizing: content-box; */
+				box-sizing: border-box;
+				background: #afa;
+				height: 100px;
+				width: 30%;
+				float: left;
+				/*边框计算到总宽度*/
+				border-left: 30px solid #000;
+				/*内边距计算到总宽度*/
+				padding-left: 20px;
+				/*外间距计算到总宽度*/
+				margin-left: 1px;
+			}
+			#d2 {
+				background: #faa;
+				height: 100px;
+				width: 70%;
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1">11111</div>
+		<div id="d2">22222</div>
+	</body>
+</html>
