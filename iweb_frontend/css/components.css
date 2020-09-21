@@ -229,9 +229,58 @@
 	font-weight: bold;
 	line-height: 1.7em;
 }
+.mainbar .teacher-item{
+	padding: 2em 0;
+}
+.mainbar .teacher-item  .pic   img{
+	width: 100%;
+}
+.mainbar .teacher-item  .tname{
+	font-size: 1.2em;
+	color: #555;
+	line-height: 2.6em;
+	display: block;  /*显示为块级元素独立占一整行*/
+	text-align: center;
+}
+.mainbar .teacher-item .maincourse{
+	font-size: .8em;
+	color: #999;
+	display: block;
+	text-align: center;
+}
+/*在平板屏幕下讲师列表一行只能大约显示3.5个讲师信息溢出内容水平滚动*/
+@media screen and (min-width:768px) and (max-width:1023px) {
+	.teacher-list{
+		white-space: nowrap; /*一行结尾处的空白处不换行*/
+		overflow-x: auto;/*水平方向内容溢出时显示滚动条*/
+		margin-left: 0; /*取消.row左边带的margin*/
+		margin-right: 0; /*取消.row右边带的margin*/
+	}
+	.col-lg-5-1{
+		float: none; /*取消列浮动——浮动元素只要空间不够必然转到下一行*/
+		/*根据PAD屏下 .container宽度(150px).设置内容宽*/
+		width: 214px;
+		/*将列表设置为"行内块"——就可以在一行中出现多个列*/
+		display: inline-block;
+	}
+}
 
 
-
+/*在手机屏幕下讲师列表一行只能大约显示2.5个讲师信息,溢出内容水平滚动*/
+@media  screen and (max-width:767px) {
+	.teacher-list{
+	white-space: nowrap;
+	overflow-x: auto;
+	margin-left: 0;
+	margin-right: 0;
+	}
+	.col-lg-5-1{
+		float: none;
+		width: 140px;
+		display: inline-block;
+	}
+	
+}
 
 
 
@@ -244,4 +293,32 @@
 .bottombar > .container > .row:first-child{
 	border-bottom: 1px solid #ddd;
 	
+}
+.bottombar .fn-menu-header{
+	margin-bottom: 5px;
+	color: #555;
+}
+.bottombar  .fn-menu{
+	color: #666;
+	line-height: 1.8em;
+}
+.bottombar  .contact{
+	margin-top: 40px;
+}
+.bottombar  .contact   .fa-fax{
+	color: #00BE56;
+	font-size: 3em;
+	float: left;
+}
+.bottombar  .contact   .hotline{
+	margin-left: 4em;
+	font-size: 1.4em;
+	line-height: 2em;
+}
+.bottombar  .copyright{
+	text-align: center;
+	color: #999;
+	font-size: .8em;
+	line-height: 2em;
+	margin: 1em 0 1.5em;
 }
