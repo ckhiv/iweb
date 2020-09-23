@@ -1,0 +1,29 @@
+.adress{
+	width: 800px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.address-items{
+	padding: 30px 0;
+	border-bottom: 1px dotted #ccc;
+}
+.location{
+	color: #000;
+	margin: 30px 70px 0;
+}
+.address-items>h3{
+	font-size: 18px;
+	padding-left: 150px;
+	margin-top: -70px;
+	font-weight: lighter;
+	margin-bottom: 10px;
+	padding-bottom: 8px;
+}
+.address-items>p{
+	font-size: 10px;
+	color: #999;
+	padding-left: 150px;
+	margin-top: 10px;
+	line-height: 8px;
+}

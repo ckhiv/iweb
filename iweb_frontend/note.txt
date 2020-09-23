@@ -1,26 +1,20 @@
-111.面试题：编写大型页面时CSS的章法？
-  一个大型页面（例如：京东首页）CSS大约有1000行，编写时有一定的章法：
-  ①CSS Reset：样式重置，把HTML标签的默认样式统一化——可以使用Normalize.css
-  ②Scaffolding：样式脚手架，设定全局的基础样式
-  ③Layout System：布局系统，进行页面布局必需的class
-  ④
-  ⑤
+一、如何在布局系统中让图标/文字边缘留白？
+方式1：添加margin或padding
+  局限：会导致内容区域变小
+方式2：修改元素定位方式为相对/绝对，再修改left或right
+  局限：相对或绝对定位本身的用途不是为了微调某个元素的位置；与渐变动画配合不加
+方式3：使用CSS3提供的变形函数，不影响定位，不影响其他元素，与transition过渡动画完美配合
+  局限：CSS新特性，老IE不支持
+.logo{
+	transform:translateX(10px)/* 沿着X轴平移 */
+}
 
-
-课后任务：
-①创建01-homework.html，仿写iweb的导航条
-②创建02-homework.html，仿写iweb的轮播广告
-
-2.使用浮动布局时常见的问题
-  若容器中的子元素全部浮动,则父容器不再有高度.
-  解决方案:给父容器添加新的没有浮动的子元素
-  .child{
-	  float:left;
-  }
-  .parent:after{
-	  /*在父容器尾部生成新孩子*/
-	  content:'';
-	  display:block;
-	  clear:both;  /*清除兄弟元素浮动造成的影响*/
-  }
-  
+二、小技巧：如何创建一个"充满整个屏幕的容器"？
+.box{
+	position:fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	/* 此处不能使用height：100% */
+}
