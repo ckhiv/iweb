@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="css/Layout.css">
 		<link rel="stylesheet" href="css/components.css">
 	</head>
-  <body>
+	<body>
 		<!-- 1.最顶部的“灰色条”：topbar-->
 		<div class="topbar hidden-sm">
 			<div class="container">
@@ -67,13 +67,14 @@
 
 					<!-- 仅在PHONE屏幕下显示的：汉堡包按钮 -->
 					<div class="col-sm-2 hidden-md hidden-lg">
-						<span class="fa fa-navicon hamburger"></span>
+						<!-- 通过添加自定义属性,为元素添加JS操作 -->
+						<span date-toggle="nav" class="fa fa-navicon hamburger"></span>
 					</div>
 				</div>
 			</div>
 
 			<!-- 3.导航条：navbar -->
-			<div class="navbar">
+			<div  data-target="nav" class="navbar active">
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12 col-md-10 col-lg-10">
@@ -88,7 +89,7 @@
 							</ul>
 
 							<!-- 仅在PHONE屏幕下显示的关闭按钮 -->
-							<span class="menu-close hidden-md hidden-lg">&times;</span>
+							<span data-close="nav" class="menu-close hidden-md hidden-lg">&times;</span>
 						</div>
 						<div class="col-md-2 col-lg-2 hidden-sm">
 							<div class="user-center">
@@ -123,8 +124,8 @@
 						</ul>
 						<!-- 上/下一张切换控件 -->
 						<div class="controls">
-							<div class="prev"><span class="fa fa-chevron-left"></span></div>
-							<div class="next"><span class="fa fa-chevron-right"></span></div>
+							<div data-carousel="prev" class="prev"><span class="fa fa-chevron-left"></span></div>
+							<div data-carousel="next" class="next"><span class="fa fa-chevron-right"></span></div>
 						</div>
 					</div>
 				</div>
@@ -204,15 +205,7 @@
 								<span class="price">￥599.00</span>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-
-							<div class="course">
-								<a href="#" class="pic"><img src="img/course/04.jpg"></a>
-								<a href="#" class="title">09-微信小程序开发</a>
-								<a href="#" class="teacher">讲师：程涛</a>
-								<span class="price">￥599.00</span>
-							</div>
-						</div>
+						
 
 
 					</div>
@@ -460,33 +453,36 @@
 								<div>首页</div>
 							</div>
 						</div>
-						
+
 						<div class="col-sm-5-1">
 							<div class="tab">
-									<span class="fa fa-map"></span>
-									<div>课程</div>
-								</div>
+								<span class="fa fa-map"></span>
+								<div>课程</div>
 							</div>
+						</div>
 						<div class="col-sm-5-1">
 							<div class="tab">
-									<span class="fa fa-bank"></span>
-									<div>校区</div>
-								</div>
+								<span class="fa fa-bank"></span>
+								<div>校区</div>
 							</div>
+						</div>
 						<div class="col-sm-5-1">
 							<div class="tab">
-									<span class="fa fa-address-card"></span>
-									<div>讲师</div>
-								</div>
+								<span class="fa fa-address-card"></span>
+								<div>讲师</div>
 							</div>
-							<div class="col-sm-5-1">
-								<div class="tab">
-										<span class="fa fa-user"></span>
-										<div>用户</div>
-									</div>
-								</div>
+						</div>
+						<div class="col-sm-5-1">
+							<div class="tab">
+								<span class="fa fa-user"></span>
+								<div>用户</div>
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+			<!-- 在此处引入所有的JS文件 -->
+			<script src="js/components.js"></script>
+			<script src="js/index.js"></script>
 	</body>
 </html>

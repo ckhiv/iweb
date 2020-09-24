@@ -182,6 +182,11 @@
 		background: rgba(0,0,0,0.7);/* 半透明 */
 		height: auto;
 		z-index: 9999;
+		transition: all .3s;/*在0.3秒钟之内将属性的改变添加过度动画*/
+	}
+	.navbar.active{
+		/* 带.active的导航条取消平移变形 */
+		transform: translate(0);
 	}
 	.menu>li{
 		float: none;/* PHONE下每个菜单项独占一行 */
