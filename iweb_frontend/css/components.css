@@ -520,3 +520,23 @@
 		font-size: 2em;
 	}
 }
+
+
+/* 8.面包屑 */
+.breadcrumb ul:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.breadcrumb ul li{
+	float: left;
+	line-height: 3em;
+}
+.breadcrumb ul li:not(:last-child):after{
+	content: '>';
+	margin: 0 0.5em;
+	color: #999;
+}
+.breadcrumb ul li a{
+	color: #999;
+}
