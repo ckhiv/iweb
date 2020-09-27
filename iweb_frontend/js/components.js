@@ -7,14 +7,14 @@ document.querySelector('[date-toggle="nav"]').onclick = function() {
 }
 
 document.querySelector('[data-close="nav"]').onclick = function() {
-	document.querySelector('[data-target="nav"]').classList.remove('active')
+document.querySelector('[data-target="nav"]').classList.remove('active')
 }
 
 /*2.轮播广告*/
 let currentCarousel = 0  //当前正在显示哪个广告
 let totalCarousel = 4  //轮播广告的总数
 //点击"下一张"按钮,自动切换到广告中的下一张
-document.querySelector('[data-carousel="next"]').onclick = function(){
+document.querySelector('[data-carousel="next"]').onclick = function() {
 	currentCarousel++
 if(currentCarousel>=totalCarousel){
 	//如果已经切换到最后一张之后,必需重回到0
