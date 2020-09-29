@@ -1,0 +1,62 @@
+/*1.主体部分*/
+.mainbar{
+	background: #fcfcfc;
+}
+.mainbar:before,
+.mainbar:after{  /*内容生成,解决.mainbar里.container的margin越界问题*/
+	content: '';
+	display: table;
+}
+
+.mainbar .container{
+	margin: 3em auto 3.5em;
+	border: 1px solid #e6e6e6;
+	/*边框外侧的外阴影:水平偏移量*/
+	box-shadow: 0 0 2px #E6E6E6;
+	
+	border-radius: 2px;
+	padding: 1em 7em 2em;
+}
+.mainbar .header{
+	color: #FF9300;
+	font-size: 1em;
+	text-align: center;
+	line-height: em;
+	border-bottom: 1px solid #ddd;
+}
+.form .row{
+	line-height: 2.9em;
+	padding: .6em 0;
+	color: #333333;
+}
+.row  label{
+	/*label默认是inline元素,无法指定左右对齐,必须修改为块级元素*/
+	display: block;
+	text-align: right;
+}
+.form input{
+	width: 100%;
+	padding: .8em 1em;
+	border: 1px solid #ccc;
+	/*边框的圆角半径*/
+	border-radius: 3px;
+	
+}
+.form span.error{
+	color: #f00;
+}
+.form span.succ{
+	color: #00c160;
+}
+@media  screen and (max-width:767px) {
+	.form .row{
+		line-height: 2em;
+	}
+	.form label{
+		text-align: left;
+	}
+	
+}
+
+
+
