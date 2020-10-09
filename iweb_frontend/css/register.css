@@ -1,62 +1,89 @@
-/*1.主体部分*/
 .mainbar{
-	background: #fcfcfc;
+	background-color: #FCFCFC;
 }
 .mainbar:before,
-.mainbar:after{  /*内容生成,解决.mainbar里.container的margin越界问题*/
-	content: '';
+.mainbar:after{
+	content:'';
 	display: table;
 }
-
 .mainbar .container{
+	background: #fff;
 	margin: 3em auto 3.5em;
 	border: 1px solid #e6e6e6;
-	/*边框外侧的外阴影:水平偏移量*/
-	box-shadow: 0 0 2px #E6E6E6;
-	
+	/*外阴影:水平偏移 竖直 阴影*/
+	box-shadow:0 0 10px #fff ;
 	border-radius: 2px;
 	padding: 1em 7em 2em;
 }
-.mainbar .header{
-	color: #FF9300;
-	font-size: 1em;
-	text-align: center;
-	line-height: em;
+.form .header{
+	font-size: 1.4em;
+	color: #ff9300;
+	line-height: 4em;
 	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+.form .header .jump-to-login{
+	font-size: 0.8em;
+	color: #ff9300;
 }
 .form .row{
-	line-height: 2.9em;
-	padding: .6em 0;
-	color: #333333;
+	line-height: 2.5em;
+	padding: 0.6em 0;
 }
-.row  label{
-	/*label默认是inline元素,无法指定左右对齐,必须修改为块级元素*/
-	display: block;
+.form lable{
 	text-align: right;
+	display: block;
+	font-size: 1.3em;
 }
-.form input{
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="tel"]{
 	width: 100%;
-	padding: .8em 1em;
-	border: 1px solid #ccc;
-	/*边框的圆角半径*/
-	border-radius: 3px;
-	
+	padding: 1em 1em;
+	border: 1px solid #CCCCCC;
+	border-radius:3px;
+	vertical-align: middle;
 }
 .form span.error{
-	color: #f00;
+	color:#f00;
 }
 .form span.succ{
 	color: #00c160;
 }
-@media  screen and (max-width:767px) {
+.form .captcha{
+	height: 34px;
+	vertical-align: middle;/*这样可以让图片与文字竖直对齐*/
+}
+.form .refresh{
+	font-size: 2em;
+	color: #00BE56;
+	cursor: pointer;
+}
+
+.button-szh{
+	background: #66a428;
+	border: none;
+	padding: 0.5em 0em;
+	color: #fff;
+	font-size: 1.5em;
+	margin-left: 2em;
+}
+.button-szh:hover{
+	background:green;
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+	.button-szh{
+		width: 280px;
+	}
+}
+@media screen and (max-width:767px){
+	.mainbar .container{
+		padding: 0em 1em 1em;
+	}
 	.form .row{
 		line-height: 2em;
 	}
-	.form label{
-		text-align: left;
+	.form lable{
+		text-align:left;
 	}
-	
 }
-
-
-

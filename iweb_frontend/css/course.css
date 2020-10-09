@@ -1,10 +1,10 @@
 /* 1.课程类别列表 */
 .course-types{
-	background: #f5f5f5;
-	padding: 1.5em 1em;
+	background: #f9f9f9;
+	padding: 1em;
 	font-size: 1.2em;
-	color: #555;
-	line-height: 1.8em;
+	color: #555555;
+	line-height: 1.6em;
 }
 .course-types span{
 	float: left;
@@ -12,17 +12,18 @@
 .course-types ul{
 	margin-left: 6em;
 }
-.course-types ul:after{
-	content:'';
+.course-types ul li{
+	float: left;
+	padding: 0em 1.5em;
+}
+.course-types ul::after{
+	content: '';
 	display: block;
 	clear: both;
 }
-.course-types ul li{
-	float: left;
-	padding: 0 1.5em;
-}
 .course-types ul li.active{
-	background: #00be56;
+	background-color: #00be56;
+	color: #fff;
 }
 .course-types ul li.active a{
 	color: #fff;
@@ -30,59 +31,63 @@
 
 /* 2.课程列表 */
 .course-list{
-	margin-top:1.5em;
-	border-top: 2px solid #9ef08c;
+	margin-top:1.5;
+	border-top:2px solid #9ef08c;
 }
 .course{
 	padding: 2em 0;
-	border-bottom: 1px dotted #ccc;/*圆点下边框*/
+	border-bottom: 1px dotted #CCCCCC;
 }
 .course .pic{
-	width: 100%;/*图片充满一列*/
-	/* max-width:100%; */
+	width: 100%;/*图片撑满一列*/
 }
-.course .details {
+.course .details{
 	color: #555;
-	position: relative;/*相对定位后成为“价格”的绝对定位参照物*/
+	position: relative;
 }
 .course .details h3{
 	
 }
 .course .details p{
-	line-height: 1.2em;
-	margin: 0;/*取消p元素自带的margin*/
+	line-height: 2em;
+	margin: 0;/* 取消p元素自带的margin */
 }
 .course .details span{
 	position: absolute;
-	right:0;
+	right: 0;
 	top: 50%;
-	font-size: 1.8em;
+	margin-top: -0.9em;
 	color: #ff5a00;
+	font-size: 1.8em;
+	
 }
-.course .jupm{
-	/* height: 100%;  无效——列的高度只能靠内容撑起来 */
-	text-align: right;/*按钮属于行内块元素，可以随着内容右对齐*/
+.course .jump{
+	/* height: 100%;无效---列的高度只能靠内容撑起来 */
 }
 .course .jump2details{
-    margin-top: 46px;/*控制上外间距，实现“竖直居中”*/
-	background: #55c760;
+	/* position: absolute; */
+	margin-left: 45px;
+	margin-top:48px;
+	background-color: #55c765;
 	border: none;
 	color: #fff;
-	padding: 0.8em 2em;	
+	padding: 0.8em 2em;
+
 }
-/* PAD屏幕下，课程列表样式的调整 */
+/* pad屏幕下，课程列表样式调整 */
 @media screen and (min-width:768px) and (max-width:1023px) {
 	.course .details h3{
-		margin: 0 0 0.8em;
+		margin: 0 0 0 0.8em;
 	}
 	.course .details p{
 		line-height: 1.7em;
 	}
 	.course .jump2details{
-		margin-top: 32px;
+		margin-top: 25px;
+		margin-left: 0px;
 	}
 }
-/* PHONE屏幕下，课程类别/课程列表样式的调整 */
+/* phone屏幕下，课程类别/课程列表样式调整 */
 @media screen and (max-width:767px) {
 	.course-types span{
 		float: none;
@@ -90,11 +95,12 @@
 	.course-types ul{
 		margin-left: 0;
 		border: 1px solid #00be56;
-		display: flex;/*父元素采用弹性布局*/
+		display: flex;
 	}
+		
 	.course-types ul li{
-		padding: 0;/*清除全局样式中添加的左右padding*/
-		/* 弹性容器中的每个子元素指定弹性占比 */
+		padding: 0 ;
+		/* 弹性容器中每个元素指定弹性占比 */
 		flex: 1;
 		text-align: center;
 	}
@@ -107,22 +113,21 @@
 	.course .details span{
 		position: static;
 		font-size: 1.2em;
-		/* span默认是inline元素，上下margin无效 */
 		display: block;
 		margin-top: 1.4em;
 	}
 	.course {
-		/* 相对定位，为“查看详情”按钮提供绝对定位的参照物 */
 		position: relative;
 		padding: 1em 0;
 	}
-	.course .jupm{
+	.course .jump{
 		position: absolute;
-		right: 0;
+		right: 1em;
 		bottom: 1em;
 	}
-	.course .jupm .jump2details{
+	.course .jump .jump2details{
 		padding: 0.4em 1em;
 		margin-top: 0;
 	}
 }
+
